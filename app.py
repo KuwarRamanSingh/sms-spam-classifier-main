@@ -5,6 +5,10 @@ from nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
 
+# Download necessary NLTK resources
+nltk.download('punkt')
+nltk.download('stopwords')
+
 # Load the trained model and vectorizer
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
